@@ -30,13 +30,13 @@ def getMap(request):
                 city_dict[city_read] = [longitude_read,latitude_read]
        
     
-        if city_dict['Pancevo']:
-            print(city_dict['Pancevo'][0])
-            print(city_dict['Pancevo'][1])
-            print(city_dict['Pancevo'])
+        if city_dict['Djakovica']:
+            print(city_dict['Djakovica'][0])
+            print(city_dict['Djakovica'][1])
+            print(city_dict['Djakovica'])
         
-        longitude = city_dict['Pancevo'][0]
-        latitude = city_dict['Pancevo'][1]
+        latitude = city_dict['Djakovica'][0]
+        longitude = city_dict['Djakovica'][1]
 #     ip = requests.get('https://api.ipify.org').text
 #     loc_string = requests.get('https://ipapi.co/{}/json/'.format(ip))
 #     loc = loc_string.text
