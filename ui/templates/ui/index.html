@@ -16,12 +16,40 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit-icons.min.js"></script>
 
   <body>
-    <div class="uk-panel uk-panel-box">
-      <h2>Naslov</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis sem pretium, dapibus nisi vitae, pretium urna. Quisque id elementum dolor, at aliquet lectus. Aenean maximus arcu vitae neque vulputate, a efficitur felis laoreet. Vestibulum eget turpis molestie, tincidunt eros quis, fringilla dui. Fusce lectus orci, pellentesque in suscipit non, tristique vel massa. Donec sit amet cursus eros. Integer dignissim metus sed mattis sagittis. Donec porttitor tellus dui, ut placerat risus interdum vitae. Praesent semper egestas erat ac ornare. Sed metus erat, sollicitudin a dui sodales, fringilla egestas justo. Etiam sit amet diam nulla. Ut eu hendrerit ante. Quisque nec dui sit amet felis vehicula gravida vitae in orci. Morbi nisl enim, semper a magna ut, porta posuere enim. Nulla consequat vulputate arcu ac ultrices.
 
-  Etiam eget vehicula ipsum, quis blandit mi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent sollicitudin euismod dictum. In laoreet ornare justo, at gravida arcu finibus eget. Curabitur porta convallis ligula, vel fringilla sapien luctus sit amet. Maecenas tempor iaculis est, eget sagittis magna consectetur vel. Praesent vehicula quis sem a bibendum. Donec eget odio fringilla, ultricies sapien sed, consequat lacus. Nulla lobortis vulputate congue. Phasellus viverra odio convallis mi iaculis, nec euismod massa porttitor. Cras et tempus lorem.</p>
-    </div>
+
+      <div class="uk-position-relative">
+          <img src="https://source.unsplash.com/random/1920x1080" alt="">
+          <div class="uk-position-top">
+              <nav class="uk-navbar-container" uk-navbar>
+
+                <div class="uk-navbar-left">
+                    <ul class="uk-navbar-nav">
+                      <li class="uk-active"><a class="uk-navbar-item uk-logo" href="#"><span><span uk-icon="icon: happy; ratio: 2"></span></span>family_counter</a></li>
+                      <li class="uk-parent"><a href=""></a></li>
+                      <li><a href=""></a></li>
+                    </ul>
+                </div>
+
+
+
+                  <div class="uk-navbar-right">
+                      <ul class="uk-navbar-nav">
+                          <li>
+                              <a href="#"><span uk-icon="icon: users"></span> Accounts</a>
+                              <div class="uk-navbar-dropdown">
+                                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                                      <li><a href= {% url 'user_login' %}><span uk-icon="icon: sign-in"></span> Log In</a></li>
+                                      <li><a href= {% url 'register' %}><span uk-icon="icon: plus"></span> SIgn Up</a></li>
+                                  </ul>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              </nav>
+          </div>
+      </div>
+
   </body>
 
 </html>

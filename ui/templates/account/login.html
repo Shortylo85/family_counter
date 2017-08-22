@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Registration</title>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/css/uikit.min.css" />
+
+    <!-- jQuery is required -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit-icons.min.js"></script>
+  </head>
+  <body>
+
+    <div class="uk-container uk-container-small">
+      <h1 class="uk-text-center">This is Login form</h1>
+      <form  class="uk-form-stacked" action= {% url 'getMap' %} method="post">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="uk-margin">
+            <label class="uk-form-label" for="form-stacked-text">{{ field.label_tag }}</label>
+            <!-- {% if field.errors %}
+            <div class="uk-alert-danger" uk-alert>
+              <a class="uk-alert-close" uk-close></a>
+              <p>{{ field.errors }}</p>
+            </div>
+            {% endif %} -->
+            <div class="uk-form-controls">
+               <input class="uk-input" id= {{ field }}
+            </div>
+        </div>
+        {% endfor %}
+        <button class="uk-button uk-button-primary" type="submit" name="button">Log in</button>
+      </form>
+
+    </div>
+
+
+
+
+  </body>
+</html>

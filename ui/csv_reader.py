@@ -13,12 +13,12 @@ with open('GeoLiteCity-Location.csv') as csvfile:
             latitude_read = row[6]
 #                 print("City is: {}, longitude is: {}, latitude is {}".format(city_read, longitude_read, latitude_read))
 
-            city_dict[city_read] = [longitude_read,latitude_read]
-    print(city_dict)
-    print(subprocess.check_output(['pwd']))
+            city_dict[city_read] = [city_read,longitude_read,latitude_read]
+    print(city_dict['Pancevo'])
+#     print(subprocess.check_output(['pwd']))
 
-    if city_dict['Pancevo'][0]:
-        print(city_dict['Pancevo'][0])
-        print(city_dict['Pancevo'][1])
-        
-        print(city_dict['Pancevo'])
+#     if city_dict['Pancevo'][0]:
+#         print(city_dict['Pancevo'][0])
+#         print(city_dict['Pancevo'][1])
+#         
+#         print(city_dict['Pancevo'])
